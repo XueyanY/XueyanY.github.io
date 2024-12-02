@@ -1,0 +1,94 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f0f1f;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: #18181e;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 80px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: #a8a8a8;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #ff4c60;
+}
+
+/* Experience Section */
+.experience-section {
+    padding: 50px 10%;
+}
+
+.section-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff4c60;
+}
+
+.experience-category {
+    margin-bottom: 50px;
+}
+
+.category-title {
+    font-size: 2rem;
+    color: #ff4c60;
+    margin-bottom: 20px;
+}
+
+.experience-item {
+    margin-bottom: 30px;
+}
+
+.job-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.company {
+    font-size: 1rem;
+    color: #a8a8a8;
+    margin-bottom: 10px;
+}
+
+.job-details {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.job-details li {
+    margin-bottom: 10px;
+}
