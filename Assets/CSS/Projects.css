@@ -9,46 +9,88 @@ body {
     font-family: Arial, sans-serif;
     background-color: #0f0f1f;
     color: #fff;
-    line-height: 1.6;
 }
 
-/* Header */
-.header {
+/* Header Bar */
+.header-bar {
     background-color: #18181e;
-    padding: 20px 10%;
-    display: flex;
-    justify-content: flex-end; /* Align navigation to the right */
-    align-items: center;
+    padding: 20px 10%; /* Larger padding for a bigger navbar */
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    height: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    height: 80px; /* Taller navbar */
+}
+
+/* Navigation Container */
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Separate left and right sections */
+    align-items: center; /* Vertically center content */
+}
+
+/* Logo Section */
+.nav-left {
+    display: flex;
+    align-items: center; /* Align logo image and text vertically */
+    gap: 10px; /* Add spacing between logo and text */
+}
+
+.logo-image {
+    width: 40px; /* Adjust size of the logo image */
+    height: 40px;
+    border-radius: 50%; /* Optional: Makes the logo circular */
+    object-fit: cover; /* Ensures the image fits within the circle */
+}
+
+.logo-text {
+    font-size: 1.3rem; /* Larger text for emphasis */
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Navigation Links Section */
+.nav-right {
+    text-align: right;
 }
 
 .nav-links {
     list-style: none;
-    display: flex;
-    gap: 40px;
-}
-
-.nav-links li {
-    display: inline-block;
+    display: inline-flex; /* Align links horizontally */
+    gap: 30px; /* Space between links */
 }
 
 .nav-links li a {
     color: #a8a8a8;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Larger font for better readability */
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: #ff4c60;
+    color: #ff4c60; /* Highlight effect */
 }
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column; /* Stack logo and links */
+        align-items: flex-start; /* Align links to the left */
+    }
+
+    .nav-right {
+        text-align: left; /* Align links to the left */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 15px; /* Adjust spacing */
+    }
+}
+
 
 /* Projects Section */
 .projects-section {
