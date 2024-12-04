@@ -177,26 +177,37 @@ body {
 .institution {
     font-size: 1.5rem;
     color: #ffffff;
-    margin-bottom: 5px;
+    margin-bottom: 10px; /* Add space below the institution name */
+    line-height: 1.8; /* Adjust line height for better spacing */
 }
 
 .degree {
     font-size: 1.2rem;
     color: #a8a8a8;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Add space below the degree text */
+    line-height: 1.8; /* Adjust line height for better spacing */
 }
 
 .details {
     font-size: 1rem;
     color: #cccccc;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Add space below the details */
+    line-height: 1.8; /* Adjust line height for better spacing */
 }
 
 .relevant-courses {
     font-size: 0.9rem;
     color: #cccccc;
-    line-height: 1.6; /* Increased line height for better readability */
+    margin-top: 10px; /* Add space above relevant courses */
+    margin-bottom: 20px; /* Add space below relevant courses */
+    line-height: 1.8; /* Increase line height */
 }
+
+/* Timeline Item */
+.timeline-item {
+    margin-bottom: 60px; /* Add more space between each timeline item */
+}
+
 
 /* Footer */
 .footer {
