@@ -58,21 +58,23 @@ body {
     .navbar {
         padding: 10px; /* Adjust padding for smaller screens */
     }
-
-    .navbar-nav {
-        flex-direction: column; /* Stack links vertically on small screens */
-        gap: 0 px; /* Spacing between links */
+    .nav-container {
+        flex-direction: column; /* Stack logo and links */
         align-items: flex-start; /* Align links to the left */
     }
 
-    .nav-link {
-        margin-left: 80px; /* Add left margin to the menu items */
+    .navbar-nav {
+        margin-right: 0; /* Remove right margin on smaller screens */
     }
 
-    .navbar-brand {
-        justify-content: center; /* Center the logo and text on smaller screens */
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 15px; /* Adjust spacing */
     }
 }
+
+
+
 
 /* Hero Section */
 .hero {
@@ -133,6 +135,7 @@ body {
     background-color: #ff313d !important; /* Slightly darker red on hover */
 }
 
+
 /* Footer */
 .footer {
     text-align: center;
@@ -140,4 +143,17 @@ body {
     background-color: #18181e;
     color: #a8a8a8 !important;  /* Light gray color */
     margin-top: auto; /* Push footer to the bottom */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Stack links vertically on small screens */
+        gap: 15px; /* Spacing between links */
+    }
+
+    .navbar-brand {
+        justify-content: center; /* Center the logo and text on smaller screens */
+    }
 }
