@@ -56,48 +56,23 @@ body {
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px 5%; /* Compact navbar padding for smaller screens */
-    }
-
-    .navbar-collapse {
-        display: flex;
-        flex-direction: column; /* Stack menu items vertically */
-        align-items: center; /* Center items horizontally */
-        justify-content: center; /* Center items vertically */
-        margin: 0 auto; /* Center the entire collapse menu */
-        background-color: #18181e; /* Matches navbar theme */
-        border-radius: 10px; /* Optional rounded corners */
-        height: 100vh; /* Full height for vertical centering */
+        padding: 10px; /* Adjust padding for smaller screens */
     }
 
     .navbar-nav {
-        display: flex;
-        flex-direction: column; /* Stack menu items */
-        align-items: center; /* Center items horizontally */
-        gap: 20px; /* Add spacing between menu items */
-    }
-
-    .navbar-nav .nav-item {
-        margin: 0; /* Remove default margin */
-    }
-
-    .navbar-toggler {
-        margin-right: 10px; /* Optional: Adjust toggle button alignment */
-    }
-
-    .nav-container {
-        flex-direction: column; /* Stack logo and links */
+        flex-direction: column; /* Stack links vertically on small screens */
+        gap: 0 px; /* Spacing between links */
         align-items: flex-start; /* Align links to the left */
     }
 
+    .nav-link {
+        margin-left: 80px; /* Add left margin to the menu items */
+    }
+
     .navbar-brand {
-        margin-bottom: 20px; /* Add spacing below the brand */
-        text-align: center; /* Center the brand logo and text */
+        justify-content: center; /* Center the logo and text on smaller screens */
     }
 }
-
-
-
 
 /* Hero Section */
 .hero {
@@ -158,7 +133,6 @@ body {
     background-color: #ff313d !important; /* Slightly darker red on hover */
 }
 
-
 /* Footer */
 .footer {
     text-align: center;
@@ -166,17 +140,4 @@ body {
     background-color: #18181e;
     color: #a8a8a8 !important;  /* Light gray color */
     margin-top: auto; /* Push footer to the bottom */
-}
-
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .navbar-nav {
-        flex-direction: column; /* Stack links vertically on small screens */
-        gap: 15px; /* Spacing between links */
-    }
-
-    .navbar-brand {
-        justify-content: center; /* Center the logo and text on smaller screens */
-    }
 }
