@@ -58,21 +58,21 @@ body {
     .navbar {
         padding: 10px; /* Adjust padding for smaller screens */
     }
-    .nav-container {
-        flex-direction: column; /* Stack logo and links */
+
+    .navbar-nav {
+        flex-direction: column; /* Stack links vertically on small screens */
+        gap: 0 px; /* Spacing between links */
         align-items: flex-start; /* Align links to the left */
     }
 
-    .navbar-nav {
-        margin-right: 0; /* Remove right margin on smaller screens */
+    .nav-link {
+        margin-left: 80px; /* Add left margin to the menu items */
     }
 
-    .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 15px; /* Adjust spacing */
+    .navbar-brand {
+        justify-content: center; /* Center the logo and text on smaller screens */
     }
 }
-
 
 /* About Section */
 .about-section {
