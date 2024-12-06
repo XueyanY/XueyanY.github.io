@@ -17,78 +17,61 @@ body {
     flex-direction: column; /* Make body a flex container */
 }
 
-/* Header Bar */
-.header-bar {
-    background-color: #18181e;
-    padding: 20px 10%; /* Larger padding for a bigger navbar */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    height: 80px; /* Taller navbar */
+
+/* Header Bar - Bootstrap Overrides */
+.navbar {
+    padding: 10px 15%; /* Adds padding for a spacious look with larger left and right margins */
+    background-color: #18181e; /* Custom dark background to match overall page theme */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for depth */
 }
 
-/* Navigation Container */
-.nav-container {
+.navbar-brand {
     display: flex;
-    justify-content: space-between; /* Separate left and right sections */
-    align-items: center; /* Vertically center content */
-}
-
-/* Logo Section */
-.nav-left {
-    display: flex;
-    align-items: center; /* Align logo image and text vertically */
-    gap: 10px; /* Add spacing between logo and text */
+    align-items: center; /* Align logo and text vertically */
+    gap: 10px; /* Space between logo image and text */
+    margin-left: 80px; /* Adds extra margin to the left of the logo */
 }
 
 .logo-image {
-    width: 40px; /* Adjust size of the logo image */
+    width: 40px; /* Size of the logo image */
     height: 40px;
-    border-radius: 50%; /* Optional: Makes the logo circular */
-    object-fit: cover; /* Ensures the image fits within the circle */
+    border-radius: 50%; /* Makes the logo circular */
+    object-fit: cover; /* Ensures the image fits well */
 }
 
-.logo-text {
-    font-size: 1.3rem; /* Larger text for emphasis */
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
+.navbar-toggler {
+    border: none; /* Remove the border for a cleaner look */
 }
 
-/* Navigation Links Section */
-.nav-right {
-    text-align: right;
+.navbar-nav {
+    margin-left: auto; /* Align the navigation links to the right */
+    margin-right: 50px; /* Adds extra margin to the right of the links */
 }
 
-.nav-links {
-    list-style: none;
-    display: inline-flex; /* Align links horizontally */
-    gap: 30px; /* Space between links */
+.nav-link {
+    color: #a8a8a8; /* Gray color for links */
+    font-size: 1.3rem; /* Larger font size for links */
+    font-weight: 500; /* Slightly bold font weight for better readability */
+    transition: color 0.3s ease; /* Smooth hover effect */
 }
 
-.nav-links li a {
-    color: #a8a8a8;
-    text-decoration: none;
-    font-size: 1.1rem; /* Larger font for better readability */
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover,
-.nav-links li a.active {
-    color: #ff4c60; /* Highlight effect */
+.nav-link:hover,
+.nav-link.active {
+    color: #ffff; /* Red color for hover and active states */
 }
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
     .nav-container {
         flex-direction: column; /* Stack logo and links */
         align-items: flex-start; /* Align links to the left */
     }
 
-    .nav-right {
-        text-align: left; /* Align links to the left */
+    .navbar-nav {
+        margin-right: 0; /* Remove right margin on smaller screens */
     }
 
     .nav-links {
@@ -105,7 +88,8 @@ body {
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: bold;
     text-align: center;
     margin-bottom: 30px;
     color: #ff4c60;
@@ -196,7 +180,7 @@ body {
 }
 
 .relevant-courses {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #cccccc;
     margin-top: 10px; /* Add space above relevant courses */
     margin-bottom: 20px; /* Add space below relevant courses */
