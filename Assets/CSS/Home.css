@@ -56,22 +56,46 @@ body {
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px 5%; /* Compact navbar padding for smaller screens */
     }
+
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        margin: 0 auto; /* Center the entire collapse menu */
+        background-color: #18181e; /* Matches navbar theme */
+        border-radius: 10px; /* Optional rounded corners */
+        height: 100vh; /* Full height for vertical centering */
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column; /* Stack menu items */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Add spacing between menu items */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0; /* Remove default margin */
+    }
+
+    .navbar-toggler {
+        margin-right: 10px; /* Optional: Adjust toggle button alignment */
+    }
+
     .nav-container {
         flex-direction: column; /* Stack logo and links */
         align-items: flex-start; /* Align links to the left */
     }
 
-    .navbar-nav {
-        margin-right: 0; /* Remove right margin on smaller screens */
-    }
-
-    .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 15px; /* Adjust spacing */
+    .navbar-brand {
+        margin-bottom: 20px; /* Add spacing below the brand */
+        text-align: center; /* Center the brand logo and text */
     }
 }
+
 
 
 
