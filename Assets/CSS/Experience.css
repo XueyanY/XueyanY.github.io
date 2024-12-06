@@ -58,19 +58,34 @@ body {
     .navbar {
         padding: 10px; /* Adjust padding for smaller screens */
     }
-    .nav-container {
-        flex-direction: column; /* Stack logo and links */
+
+    .navbar-nav {
+        flex-direction: column; /* Stack links vertically on small screens */
+        gap: 0 px; /* Spacing between links */
         align-items: flex-start; /* Align links to the left */
     }
 
-    .navbar-nav {
-        margin-right: 0; /* Remove right margin on smaller screens */
+    .nav-link {
+        margin-left: 80px; /* Add left margin to the menu items */
     }
 
-    .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 15px; /* Adjust spacing */
+    .navbar-brand {
+        justify-content: center; /* Center the logo and text on smaller screens */
     }
+}
+
+/* Experience Section */
+.experience-section {
+    padding: 50px 10%;
+    text-align: center;
+    background-color: #0f0f1f !important; /* Ensure section background matches the body */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #ff4c60 !important;
 }
 
 /* Experience Section */
@@ -147,6 +162,24 @@ body {
     font-size: 1rem;
     color: #cccccc !important;
 }
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 20px; /* Adjust spacing between stacked columns */
+    }
+
+    .experience-column {
+        margin: 0 auto; /* Center each column */
+        width: 100%; /* Ensure full width for smaller screens */
+    }
+
+    .experience-card {
+        padding: 15px; /* Adjust card padding for smaller screens */
+    }
+}
+
 
 /* Footer */
 .footer {
