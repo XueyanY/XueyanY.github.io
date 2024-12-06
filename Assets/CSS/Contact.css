@@ -58,18 +58,19 @@ body {
     .navbar {
         padding: 10px; /* Adjust padding for smaller screens */
     }
-    .nav-container {
-        flex-direction: column; /* Stack logo and links */
+
+    .navbar-nav {
+        flex-direction: column; /* Stack links vertically on small screens */
+        gap: 0 px; /* Spacing between links */
         align-items: flex-start; /* Align links to the left */
     }
 
-    .navbar-nav {
-        margin-right: 0; /* Remove right margin on smaller screens */
+    .nav-link {
+        margin-left: 80px; /* Add left margin to the menu items */
     }
 
-    .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 15px; /* Adjust spacing */
+    .navbar-brand {
+        justify-content: center; /* Center the logo and text on smaller screens */
     }
 }
 
@@ -155,6 +156,29 @@ iframe {
     border: none;
     border-radius: 10px; /* Rounded corners for the form */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* Stack the columns vertically */
+        align-items: center; /* Center align the columns */
+        gap: 20px; /* Reduce the gap between the stacked sections */
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%; /* Ensure full width for stacked columns */
+    }
+
+    .contact-info img {
+        max-width: 80%; /* Reduce image size on smaller screens */
+    }
+
+    .contact-title {
+        font-size: 2rem; /* Adjust title size for smaller screens */
+    }
 }
 
 /* Footer */
