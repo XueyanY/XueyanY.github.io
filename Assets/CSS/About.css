@@ -7,82 +7,64 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #0f0f1f;
+    background-color: #0f0f1f; /* Ensure dark background matches the main page */
     color: #fff;
 }
 
-/* Header Bar */
-.header-bar {
-    background-color: #18181e;
-    padding: 20px 10%; /* Larger padding for a bigger navbar */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    height: 80px; /* Taller navbar */
+/* Header Bar - Bootstrap Overrides */
+.navbar {
+    padding: 10px 15%; /* Adds padding for a spacious look with larger left and right margins */
+    background-color: #18181e; /* Custom dark background to match overall page theme */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for depth */
 }
 
-/* Navigation Container */
-.nav-container {
+.navbar-brand {
     display: flex;
-    justify-content: space-between; /* Separate left and right sections */
-    align-items: center; /* Vertically center content */
-}
-
-/* Logo Section */
-.nav-left {
-    display: flex;
-    align-items: center; /* Align logo image and text vertically */
-    gap: 10px; /* Add spacing between logo and text */
+    align-items: center; /* Align logo and text vertically */
+    gap: 10px; /* Space between logo image and text */
+    margin-left: 80px; /* Adds extra margin to the left of the logo */
 }
 
 .logo-image {
-    width: 40px; /* Adjust size of the logo image */
+    width: 40px; /* Size of the logo image */
     height: 40px;
-    border-radius: 50%; /* Optional: Makes the logo circular */
-    object-fit: cover; /* Ensures the image fits within the circle */
+    border-radius: 50%; /* Makes the logo circular */
+    object-fit: cover; /* Ensures the image fits well */
 }
 
-.logo-text {
-    font-size: 1.3rem; /* Larger text for emphasis */
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
+.navbar-toggler {
+    border: none; /* Remove the border for a cleaner look */
 }
 
-/* Navigation Links Section */
-.nav-right {
-    text-align: right;
+.navbar-nav {
+    margin-left: auto; /* Align the navigation links to the right */
+    margin-right: 50px; /* Adds extra margin to the right of the links */
 }
 
-.nav-links {
-    list-style: none;
-    display: inline-flex; /* Align links horizontally */
-    gap: 30px; /* Space between links */
+.nav-link {
+    color: #a8a8a8; /* Gray color for links */
+    font-size: 1.3rem; /* Larger font size for links */
+    font-weight: 500; /* Slightly bold font weight for better readability */
+    transition: color 0.3s ease; /* Smooth hover effect */
 }
 
-.nav-links li a {
-    color: #a8a8a8;
-    text-decoration: none;
-    font-size: 1.1rem; /* Larger font for better readability */
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover,
-.nav-links li a.active {
-    color: #ff4c60; /* Highlight effect */
+.nav-link:hover,
+.nav-link.active {
+    color: #ff4c60; /* Red color for hover and active states */
 }
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
     .nav-container {
         flex-direction: column; /* Stack logo and links */
         align-items: flex-start; /* Align links to the left */
     }
 
-    .nav-right {
-        text-align: left; /* Align links to the left */
+    .navbar-nav {
+        margin-right: 0; /* Remove right margin on smaller screens */
     }
 
     .nav-links {
@@ -91,9 +73,11 @@ body {
     }
 }
 
+
 /* About Section */
 .about-section {
     padding: 50px 10%;
+    background-color: #0f0f1f; /* Set section background to match the main page */
 }
 
 .about-container {
@@ -118,13 +102,14 @@ body {
 }
 
 .name {
-    font-size: 2rem;
+    font-size: 1.8rem; /* Larger font size for better emphasis */
+    font-weight: bold;
     margin-bottom: 10px;
     color: #ff4c60;
 }
 
 .tagline {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Slightly larger to match the rest of the design */
     color: #a8a8a8;
 }
 
@@ -132,13 +117,14 @@ body {
 .about-right {
     flex: 2;
     background-color: #18181e;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about-right h2 {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Emphasize section headings */
+    font-weight: bold;
     margin-bottom: 15px;
     color: #ff4c60;
 }
@@ -146,12 +132,14 @@ body {
 .about-right p {
     margin-bottom: 20px;
     color: #ccc;
+    line-height: 1.6; /* Improve readability */
 }
 
 .skills-list {
     list-style: disc;
     margin-left: 20px;
     margin-bottom: 20px;
+    color: #ccc;
 }
 
 .skills-list li {
@@ -161,7 +149,8 @@ body {
 /* Footer */
 .footer {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     background-color: #18181e;
     color: #a8a8a8;
+    margin-top: auto; /* Push footer to the bottom */
 }
