@@ -7,101 +7,84 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #0f0f1f;
-    color: #fff;
+    background-color: #0f0f1f !important; /* Ensures the body background is dark */
+    color: #fff !important; /* Ensures text is white */
 }
 
-/* Header Bar */
-.header-bar {
-    background-color: #18181e;
-    padding: 20px 10%; /* Larger padding for a bigger navbar */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    height: 80px; /* Taller navbar */
+/* Header Bar - Bootstrap Overrides */
+.navbar {
+    padding: 10px 15%; /* Adds padding for a spacious look with larger left and right margins */
+    background-color: #18181e !important; /* Ensures consistent navbar background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adds shadow for depth */
 }
 
-/* Navigation Container */
-.nav-container {
+.navbar-brand {
     display: flex;
-    justify-content: space-between; /* Separate left and right sections */
-    align-items: center; /* Vertically center content */
-}
-
-/* Logo Section */
-.nav-left {
-    display: flex;
-    align-items: center; /* Align logo image and text vertically */
-    gap: 10px; /* Add spacing between logo and text */
+    align-items: center;
+    gap: 10px;
+    margin-left: 80px;
 }
 
 .logo-image {
-    width: 40px; /* Adjust size of the logo image */
+    width: 40px;
     height: 40px;
-    border-radius: 50%; /* Optional: Makes the logo circular */
-    object-fit: cover; /* Ensures the image fits within the circle */
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.logo-text {
-    font-size: 1.3rem; /* Larger text for emphasis */
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
+.navbar-toggler {
+    border: none;
 }
 
-/* Navigation Links Section */
-.nav-right {
-    text-align: right;
+.navbar-nav {
+    margin-left: auto;
+    margin-right: 50px;
 }
 
-.nav-links {
-    list-style: none;
-    display: inline-flex; /* Align links horizontally */
-    gap: 30px; /* Space between links */
-}
-
-.nav-links li a {
-    color: #a8a8a8;
-    text-decoration: none;
-    font-size: 1.1rem; /* Larger font for better readability */
+.nav-link {
+    color: #a8a8a8 !important; /* Ensures consistent gray link color */
+    font-size: 1.3rem;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-    color: #ff4c60; /* Highlight effect */
+.nav-link:hover,
+.nav-link.active {
+    color: #ffff !important; /* Ensures hover and active link states are red */
 }
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
     .nav-container {
-        flex-direction: column; /* Stack logo and links */
-        align-items: flex-start; /* Align links to the left */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .nav-right {
-        text-align: left; /* Align links to the left */
+    .navbar-nav {
+        margin-right: 0;
     }
 
     .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 15px; /* Adjust spacing */
+        flex-direction: column;
+        gap: 15px;
     }
 }
-
 
 /* Skills Section */
 .skills-section {
     padding: 50px 10%;
     text-align: center;
+    background-color: #0f0f1f !important; /* Ensures section background matches body */
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: bold;
     margin-bottom: 30px;
-    color: #ff4c60;
+    color: #ff4c60 !important; /* Ensures consistent section title color */
 }
 
 /* Skills Container */
@@ -113,7 +96,7 @@ body {
 
 .skills-column {
     flex: 1;
-    background-color: #18181e;
+    background-color: #18181e !important; /* Ensures consistent column background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -121,7 +104,7 @@ body {
 
 .skills-title {
     font-size: 2rem;
-    color: #ff4c60;
+    color: #ff4c60 !important;
     margin-bottom: 20px;
     text-align: center;
     border-bottom: 2px solid #ff4c60;
@@ -135,16 +118,17 @@ body {
     justify-content: space-between;
     margin-bottom: 20px;
     font-size: 1rem;
+    color: #a8a8a8 !important; /* Ensures skill text is gray */
 }
 
 .skill-item span {
     flex: 1;
-    color: #a8a8a8;
+    color: #a8a8a8 !important;
 }
 
 .progress-bar {
     flex: 5;
-    background-color: #2b2b38;
+    background-color: #2b2b38 !important; /* Ensures consistent progress bar background */
     height: 10px;
     border-radius: 5px;
     margin: 0 10px;
@@ -154,30 +138,31 @@ body {
 
 .progress {
     height: 100%;
-    background: linear-gradient(90deg, #ff4c60, #ff1660);
+    background: linear-gradient(90deg, #ff4c60, #ff1660) !important; /* Ensures consistent gradient progress */
     border-radius: 5px;
 }
 
 .percentage {
     flex: 1;
     text-align: right;
-    color: #fff;
+    color: #fff !important; /* Ensures percentage is visible */
 }
 
 /* Certification Section */
 .certifications-section {
     margin-top: 50px;
     text-align: center;
+    background-color: #0f0f1f !important;
 }
 
 .certifications-title {
     font-size: 2rem;
-    color: #ff4c60;
+    color: #ff4c60 !important;
     margin-bottom: 20px;
 }
 
 .certificate {
-    background-color: #18181e;
+    background-color: #18181e !important;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -192,7 +177,7 @@ body {
 }
 
 .certificate p {
-    color: #a8a8a8;
+    color: #a8a8a8 !important;
     font-size: 1rem;
 }
 
@@ -200,19 +185,21 @@ body {
 .languages-section {
     margin-top: 50px;
     text-align: center;
+    background-color: #0f0f1f !important;
 }
 
 .languages-title {
     font-size: 2rem;
-    color: #ff4c60;
+    color: #ff4c60 !important;
     margin-bottom: 20px;
 }
 
 .language-list {
     list-style: none;
     font-size: 1.2rem;
-    color: #a8a8a8;
+    color: #a8a8a8 !important;
 }
+
 .language-list li {
     margin-bottom: 10px;
 }
@@ -220,6 +207,8 @@ body {
 /* Footer */
 .footer {
     text-align: center;
-    padding: 20px;
-    background-color: #18181e;
-    color: #a8a8a8;
+    padding: 20px 0;
+    background-color: #18181e !important; /* Ensures footer matches the dark theme */
+    color: #a8a8a8 !important;
+    margin-top: auto;
+}
