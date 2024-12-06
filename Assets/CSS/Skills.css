@@ -56,20 +56,21 @@ body {
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px;
-    }
-    .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 10px; /* Adjust padding for smaller screens */
     }
 
     .navbar-nav {
-        margin-right: 0;
+        flex-direction: column; /* Stack links vertically on small screens */
+        gap: 0 px; /* Spacing between links */
+        align-items: flex-start; /* Align links to the left */
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 15px;
+    .nav-link {
+        margin-left: 80px; /* Add left margin to the menu items */
+    }
+
+    .navbar-brand {
+        justify-content: center; /* Center the logo and text on smaller screens */
     }
 }
 
@@ -202,6 +203,32 @@ body {
 
 .language-list li {
     margin-bottom: 10px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center align stacked columns */
+        gap: 20px; /* Adjust spacing between columns */
+    }
+
+    .skills-column {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 20px; /* Add spacing between stacked columns */
+    }
+
+    .skills-title {
+        font-size: 1.8rem; /* Adjust title size for smaller screens */
+    }
+
+    .skill-item {
+        font-size: 0.9rem; /* Reduce font size slightly */
+    }
+
+    .progress-bar {
+        height: 8px; /* Slightly smaller progress bar */
+    }
 }
 
 /* Footer */
